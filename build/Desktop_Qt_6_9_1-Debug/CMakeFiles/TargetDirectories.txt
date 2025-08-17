@@ -1,0 +1,9 @@
+/home/max/projects/DeadlockSimulator/build/Desktop_Qt_6_9_1-Debug/CMakeFiles/DeadlockSimulator.dir
+/home/max/projects/DeadlockSimulator/build/Desktop_Qt_6_9_1-Debug/CMakeFiles/edit_cache.dir
+/home/max/projects/DeadlockSimulator/build/Desktop_Qt_6_9_1-Debug/CMakeFiles/rebuild_cache.dir
+/home/max/projects/DeadlockSimulator/build/Desktop_Qt_6_9_1-Debug/CMakeFiles/list_install_components.dir
+/home/max/projects/DeadlockSimulator/build/Desktop_Qt_6_9_1-Debug/CMakeFiles/install.dir
+/home/max/projects/DeadlockSimulator/build/Desktop_Qt_6_9_1-Debug/CMakeFiles/install/local.dir
+/home/max/projects/DeadlockSimulator/build/Desktop_Qt_6_9_1-Debug/CMakeFiles/install/strip.dir
+/home/max/projects/DeadlockSimulator/build/Desktop_Qt_6_9_1-Debug/CMakeFiles/DeadlockSimulator_autogen_timestamp_deps.dir
+/home/max/projects/DeadlockSimulator/build/Desktop_Qt_6_9_1-Debug/CMakeFiles/DeadlockSimulator_autogen.dir
