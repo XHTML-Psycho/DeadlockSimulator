@@ -1,0 +1,16 @@
+//
+// Created by junio on 21.08.2025.
+//
+
+
+
+#ifndef DEADLOCKSIMULATOR_BANKIERALGORITHM_H
+#define DEADLOCKSIMULATOR_BANKIERALGORITHM_H
+
+
+class BankierAlgorithm {
+
+};
+
+
+#endif //DEADLOCKSIMULATOR_BANKIERALGORITHM_H
