@@ -1,0 +1,8 @@
+Request:
+To Eliminate Hold and Wait, every resource the process needs has to be free. Therefore, when the process has requested to find the next resource it will first check if all needed resources are available.
+
+Holding the Resources:
+When all of the needed resources are available the process will reserve all of them and only release them once they have all been used. If not all of the needed resources are available the process will wait until they are.
+
+Reservation:
+When the process has reserved all the resources it will need it will one by one occupy them in the (random) order of the needed resources list it was initialized with.

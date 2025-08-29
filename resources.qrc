@@ -1,0 +1,26 @@
+<RCC>
+    <qresource prefix="/">
+        <file>resources/Icon_White.png</file>
+        <file>resources/checkBox_off.png</file>
+        <file>resources/checkBox_on.png</file>
+        <file>resources/arrow_down.png</file>
+        <file>resources/arrow_up.png</file>
+        <file>resources/reset_Icon.png</file>
+        <file>resources/checkBox_off_hover.png</file>
+        <file>resources/checkBox_on_hover.png</file>
+        <file>resources/CD-ROM_Icon.png</file>
+        <file>resources/Plotter_Icon.png</file>
+        <file>resources/Printer_Icon.png</file>
+        <file>resources/TapeDrive_Icon.png</file>
+        <file>resources/fonts/futuraBook.ttf</file>
+        <file>resources/fonts/futuraHeavy.ttf</file>
+        <file>resources/explanations/explanationDeadlock.txt</file>
+        <file>resources/explanations/explanationBankier.txt</file>
+        <file>resources/explanations/explanationCircularWait.txt</file>
+        <file>resources/explanations/explanationHoldAndWait.txt</file>
+        <file>resources/explanations/explanationPreemption.txt</file>
+        <file>resources/explanations/explanationSimulation.txt</file>
+        <file>resources/arrow_right.png</file>
+        <file>resources/arrowleft.png</file>
+    </qresource>
+</RCC>

@@ -1,0 +1,634 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>InitDialog</class>
+ <widget class="QDialog" name="InitDialog">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>500</width>
+    <height>600</height>
+   </rect>
+  </property>
+  <property name="sizePolicy">
+   <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+    <horstretch>0</horstretch>
+    <verstretch>0</verstretch>
+   </sizepolicy>
+  </property>
+  <property name="windowTitle">
+   <string>Dialog</string>
+  </property>
+  <property name="windowIcon">
+   <iconset resource="../resources.qrc">
+    <normaloff>:/resources/Icon_White.png</normaloff>:/resources/Icon_White.png</iconset>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">background-color: rgb(52, 61, 85);</string>
+  </property>
+  <layout class="QVBoxLayout" name="verticalLayout">
+   <item>
+    <widget class="QLabel" name="label_Header">
+     <property name="styleSheet">
+      <string notr="true">color: rgb(235, 235, 235);
+font: 18pt &quot;Futura Hv BT&quot;;
+background-color: none;
+</string>
+     </property>
+     <property name="text">
+      <string>Deadlock Simulation</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QFrame" name="frame">
+     <property name="styleSheet">
+      <string notr="true">background-color: rgb(73, 81, 103);
+</string>
+     </property>
+     <layout class="QVBoxLayout" name="verticalLayout_3">
+      <item>
+       <widget class="QRadioButton" name="radio_holdwait">
+        <property name="styleSheet">
+         <string notr="true">QRadioButton {
+	font: 14pt &quot;Futura Bk BT&quot;;
+	color: rgb(105, 111, 128);
+    spacing: 20px;
+	background-color:none;
+}
+
+QRadioButton::indicator {
+    width: 19px;
+    height: 19px;
+}
+
+QRadioButton::hover,
+QRadioButton::checked {
+	color:  rgb(217, 217, 217);
+}
+
+
+QRadioButton::indicator:unchecked {
+	image: url(:/resources/checkBox_off.png);
+}
+
+QRadioButton::indicator:checked {
+	image: url(:/resources/checkBox_on_hover.png);
+}
+
+QRadioButton::indicator:unchecked:hover {
+	image: url(:/resources/checkBox_off_hover.png);
+}
+</string>
+        </property>
+        <property name="text">
+         <string>Hold and Wait</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QRadioButton" name="radio_preempt">
+        <property name="styleSheet">
+         <string notr="true">QRadioButton {
+	font: 14pt &quot;Futura Bk BT&quot;;
+	color: rgb(105, 111, 128);
+    spacing: 20px;
+	background-color:none;
+}
+
+QRadioButton::indicator {
+    width: 19px;
+    height: 19px;
+}
+
+QRadioButton::hover,
+QRadioButton::checked {
+	color:  rgb(217, 217, 217);
+}
+
+
+QRadioButton::indicator:unchecked {
+	image: url(:/resources/checkBox_off.png);
+}
+
+QRadioButton::indicator:checked {
+	image: url(:/resources/checkBox_on_hover.png);
+}
+
+QRadioButton::indicator:unchecked:hover {
+	image: url(:/resources/checkBox_off_hover.png);
+}
+</string>
+        </property>
+        <property name="text">
+         <string>No Preemption</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QRadioButton" name="radio_circularw">
+        <property name="styleSheet">
+         <string notr="true">QRadioButton {
+	font: 14pt &quot;Futura Bk BT&quot;;
+	color: rgb(105, 111, 128);
+    spacing: 20px;
+	background-color:none;
+}
+
+QRadioButton::indicator {
+    width: 19px;
+    height: 19px;
+}
+
+QRadioButton::hover,
+QRadioButton::checked {
+	color:  rgb(217, 217, 217);
+}
+
+
+QRadioButton::indicator:unchecked {
+	image: url(:/resources/checkBox_off.png);
+}
+
+QRadioButton::indicator:checked {
+	image: url(:/resources/checkBox_on_hover.png);
+}
+
+QRadioButton::indicator:unchecked:hover {
+	image: url(:/resources/checkBox_off_hover.png);
+}
+</string>
+        </property>
+        <property name="text">
+         <string>Circular Wait</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QRadioButton" name="radio_bankier">
+        <property name="styleSheet">
+         <string notr="true">QRadioButton {
+	font: 14pt &quot;Futura Bk BT&quot;;
+	color: rgb(105, 111, 128);
+    spacing: 20px;
+	background-color:none;
+}
+
+QRadioButton::indicator {
+    width: 19px;
+    height: 19px;
+}
+
+QRadioButton::hover,
+QRadioButton::checked {
+	color:  rgb(217, 217, 217);
+}
+
+
+QRadioButton::indicator:unchecked {
+	image: url(:/resources/checkBox_off.png);
+}
+
+QRadioButton::indicator:checked {
+	image: url(:/resources/checkBox_on_hover.png);
+}
+
+QRadioButton::indicator:unchecked:hover {
+	image: url(:/resources/checkBox_off_hover.png);
+}
+</string>
+        </property>
+        <property name="text">
+         <string>Bankers-Algorithm</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </item>
+   <item>
+    <widget class="QFrame" name="frame_2">
+     <property name="styleSheet">
+      <string notr="true">background-color: none;</string>
+     </property>
+     <widget class="QWidget" name="">
+      <property name="geometry">
+       <rect>
+        <x>9</x>
+        <y>11</y>
+        <width>451</width>
+        <height>91</height>
+       </rect>
+      </property>
+      <layout class="QGridLayout" name="gridLayout">
+       <item row="0" column="0">
+        <widget class="QLabel" name="label_Printer_Icon">
+         <property name="styleSheet">
+          <string notr="true">background-color: none;
+image: url(:/resources/Printer_Icon.png);</string>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+        </widget>
+       </item>
+       <item row="0" column="1">
+        <widget class="QLabel" name="label_CD_Icon">
+         <property name="styleSheet">
+          <string notr="true">background-color: none;
+image: url(:/resources/CD-ROM_Icon.png);</string>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+        </widget>
+       </item>
+       <item row="0" column="2">
+        <widget class="QLabel" name="label_Plotter_Icon">
+         <property name="styleSheet">
+          <string notr="true">background-color: none;
+image: url(:/resources/Plotter_Icon.png);</string>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+        </widget>
+       </item>
+       <item row="0" column="3">
+        <widget class="QLabel" name="label_TapeDrive_Icon">
+         <property name="styleSheet">
+          <string notr="true">background-color: none;
+image: url(:/resources/TapeDrive_Icon.png);</string>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+        </widget>
+       </item>
+       <item row="1" column="0">
+        <widget class="QSpinBox" name="spinBox_Printer">
+         <property name="styleSheet">
+          <string notr="true"> QSpinBox {
+    padding-right: 15px; /* make room for the arrows */
+    border-width: 5px;
+	border-radius: 3px;
+	color: rgb(217, 217, 217);
+	background-color: rgb(105, 111, 128);
+    padding: 8px;
+}
+
+QSpinBox::up-button {
+    subcontrol-origin: border;
+	border-radius: 3px;
+    subcontrol-position:  top right; 
+	background-color: rgb(152, 161, 186);
+    width: 20px;
+    border-width: 3px;
+}
+
+QSpinBox::up-button:hover {
+	background-color: rgb(183, 194, 224);
+}
+
+QSpinBox::up-arrow {
+	image: url(:/resources/arrow_up.png);
+}
+
+QSpinBox::down-button {
+    subcontrol-origin: border;
+	border-radius: 3px;
+    subcontrol-position:  bottom right; /* position at the top right corner */
+	background-color: rgb(152, 161, 186);
+    width: 20px; /* 16 + 2*1px border-width = 15px padding + 3px parent border */
+    border-width: 3px;
+}
+
+QSpinBox::down-button:hover {
+	background-color: rgb(183, 194, 224);
+}
+
+QSpinBox::down-arrow {
+	image: url(:/resources/arrow_down.png);
+}
+</string>
+         </property>
+         <property name="minimum">
+          <number>2</number>
+         </property>
+         <property name="maximum">
+          <number>10</number>
+         </property>
+        </widget>
+       </item>
+       <item row="1" column="1">
+        <widget class="QSpinBox" name="spinBox_Cd">
+         <property name="styleSheet">
+          <string notr="true"> QSpinBox {
+    padding-right: 15px; /* make room for the arrows */
+    border-width: 5px;
+	border-radius: 3px;
+	color: rgb(217, 217, 217);
+	background-color: rgb(105, 111, 128);
+    padding: 8px;
+}
+
+QSpinBox::up-button {
+    subcontrol-origin: border;
+	border-radius: 3px;
+    subcontrol-position:  top right; 
+	background-color: rgb(152, 161, 186);
+    width: 20px;
+    border-width: 3px;
+}
+
+QSpinBox::up-button:hover {
+	background-color: rgb(183, 194, 224);
+}
+
+QSpinBox::up-arrow {
+	image: url(:/resources/arrow_up.png);
+}
+
+QSpinBox::down-button {
+    subcontrol-origin: border;
+	border-radius: 3px;
+    subcontrol-position:  bottom right; /* position at the top right corner */
+	background-color: rgb(152, 161, 186);
+    width: 20px; /* 16 + 2*1px border-width = 15px padding + 3px parent border */
+    border-width: 3px;
+}
+
+QSpinBox::down-button:hover {
+	background-color: rgb(183, 194, 224);
+}
+
+QSpinBox::down-arrow {
+	image: url(:/resources/arrow_down.png);
+}
+
+</string>
+         </property>
+         <property name="minimum">
+          <number>2</number>
+         </property>
+         <property name="maximum">
+          <number>10</number>
+         </property>
+        </widget>
+       </item>
+       <item row="1" column="2">
+        <widget class="QSpinBox" name="spinBox_Plotter">
+         <property name="styleSheet">
+          <string notr="true"> QSpinBox {
+    padding-right: 15px; /* make room for the arrows */
+    border-width: 5px;
+	border-radius: 3px;
+	color: rgb(217, 217, 217);
+	background-color: rgb(105, 111, 128);
+    padding: 8px;
+}
+
+QSpinBox::up-button {
+    subcontrol-origin: border;
+	border-radius: 3px;
+    subcontrol-position:  top right; 
+	background-color: rgb(152, 161, 186);
+    width: 20px;
+    border-width: 3px;
+}
+
+QSpinBox::up-button:hover {
+	background-color: rgb(183, 194, 224);
+}
+
+QSpinBox::up-arrow {
+	image: url(:/resources/arrow_up.png);
+}
+
+QSpinBox::down-button {
+    subcontrol-origin: border;
+	border-radius: 3px;
+    subcontrol-position:  bottom right; /* position at the top right corner */
+	background-color: rgb(152, 161, 186);
+    width: 20px; /* 16 + 2*1px border-width = 15px padding + 3px parent border */
+    border-width: 3px;
+}
+
+QSpinBox::down-button:hover {
+	background-color: rgb(183, 194, 224);
+}
+
+QSpinBox::down-arrow {
+	image: url(:/resources/arrow_down.png);
+}
+</string>
+         </property>
+         <property name="minimum">
+          <number>2</number>
+         </property>
+         <property name="maximum">
+          <number>10</number>
+         </property>
+        </widget>
+       </item>
+       <item row="1" column="3">
+        <widget class="QSpinBox" name="spinBox_TapeDrive">
+         <property name="styleSheet">
+          <string notr="true"> QSpinBox {
+    padding-right: 15px; /* make room for the arrows */
+    border-width: 5px;
+	border-radius: 3px;
+	color: rgb(217, 217, 217);
+	background-color: rgb(105, 111, 128);
+    padding: 8px;
+}
+
+QSpinBox::up-button {
+    subcontrol-origin: border;
+	border-radius: 3px;
+    subcontrol-position:  top right; 
+	background-color: rgb(152, 161, 186);
+    width: 20px;
+    border-width: 3px;
+}
+
+QSpinBox::up-button:hover {
+	background-color: rgb(183, 194, 224);
+}
+
+QSpinBox::up-arrow {
+	image: url(:/resources/arrow_up.png);
+}
+
+QSpinBox::down-button {
+    subcontrol-origin: border;
+	border-radius: 3px;
+    subcontrol-position:  bottom right; /* position at the top right corner */
+	background-color: rgb(152, 161, 186);
+    width: 20px; /* 16 + 2*1px border-width = 15px padding + 3px parent border */
+    border-width: 3px;
+}
+
+QSpinBox::down-button:hover {
+	background-color: rgb(183, 194, 224);
+}
+
+QSpinBox::down-arrow {
+	image: url(:/resources/arrow_down.png);
+}
+</string>
+         </property>
+         <property name="minimum">
+          <number>2</number>
+         </property>
+         <property name="maximum">
+          <number>10</number>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+     <zorder>spinBox_Printer</zorder>
+     <zorder>spinBox_TapeDrive</zorder>
+     <zorder>spinBox_Cd</zorder>
+     <zorder>label_CD_Icon</zorder>
+     <zorder>label_Printer_Icon</zorder>
+     <zorder>label_Plotter_Icon</zorder>
+     <zorder>spinBox_Plotter</zorder>
+     <zorder>label_TapeDrive_Icon</zorder>
+    </widget>
+   </item>
+   <item>
+    <widget class="QPushButton" name="startSimulationButton">
+     <property name="styleSheet">
+      <string notr="true">/* Buttons */
+QPushButton {
+    background-color: #58657c;
+    border: none;
+    border-radius: 6px;
+    color: #ffffff;
+    padding: 8px 16px;
+    font: bold 14pt &quot;MS Shell Dlg 2&quot;;
+    margin: 2px;
+    
+    /* Schatten-Effekt */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+QPushButton:hover {
+    background-color: #5a6578;
+}
+
+QPushButton:pressed {
+    background-color: #3a4558;
+}
+QPushButton::!enabled {
+    border-radius: 5px;
+	background-color: rgb(43, 48, 63);
+	font: 18pt &quot;Futura Hv BT&quot;;
+	color: rgb(217, 217, 217);
+}
+</string>
+     </property>
+     <property name="text">
+      <string>Bestätigen</string>
+     </property>
+     <property name="checkable">
+      <bool>false</bool>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QPushButton" name="openGithubButton">
+     <property name="font">
+      <font>
+       <family>MS Shell Dlg 2</family>
+       <pointsize>14</pointsize>
+       <weight>75</weight>
+       <italic>false</italic>
+       <bold>true</bold>
+       <strikeout>false</strikeout>
+       <stylestrategy>PreferDefault</stylestrategy>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">/* Buttons */
+QPushButton {
+    background-color: #58657c;
+    border: none;
+    border-radius: 6px;
+    color: #ffffff;
+    padding: 8px 16px;
+    font: bold 14pt &quot;MS Shell Dlg 2&quot;;
+    margin: 2px;
+    
+    /* Schatten-Effekt */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+QPushButton:hover {
+    background-color: #5a6578;
+}
+
+QPushButton:pressed {
+    background-color: #3a4558;
+}
+QPushButton::!enabled {
+    border-radius: 5px;
+	background-color: rgb(43, 48, 63);
+	font: 18pt &quot;Futura Hv BT&quot;;
+	color: rgb(217, 217, 217);
+}
+</string>
+     </property>
+     <property name="text">
+      <string>GitHub</string>
+     </property>
+     <property name="checkable">
+      <bool>false</bool>
+     </property>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <resources>
+  <include location="../resources.qrc"/>
+ </resources>
+ <connections>
+  <connection>
+   <sender>startSimulationButton</sender>
+   <signal>clicked()</signal>
+   <receiver>InitDialog</receiver>
+   <slot>accept()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>165</x>
+     <y>221</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>261</x>
+     <y>301</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>InitDialog</sender>
+   <signal>rejected()</signal>
+   <receiver>InitDialog</receiver>
+   <slot>reject()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>261</x>
+     <y>301</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>261</x>
+     <y>301</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+</ui>

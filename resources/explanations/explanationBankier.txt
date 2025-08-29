@@ -1,0 +1,14 @@
+Anforderung:
+Wenn der Prozess die Suche nach der nächsten Ressource angefordert hat, wählt er zunächst die nächste Ressource aus, die er reservieren möchte, zusammen mit der Menge.
+
+Überprüfung des Speicherzustands:
+Wenn die nächste Ressource ausgewählt wurde, überprüft der Banker-Algorithmus anhand der folgenden drei Schritte, ob der durch die Reservierung dieser Ressource entstehende Zustand sicher ist oder nicht:
+
+1. In der Anforderungsmatrix wird nach einer Zeile mit Werten gesucht, die kleiner oder gleich dem aktuell freien Ressourcenarray sind. Wenn es keine gibt, ist der Zustand nicht sicher und die Ressourcen werden nicht reserviert.
+
+2. Wenn eine passende Zeile gefunden wird, wird sie als abgeschlossen markiert und die Ressourcenanzahl wird zum aktuell freien Ressourcenarray hinzugefügt.
+
+3. Wiederholen Sie die Schritte 1 und 2, bis alle Prozesse als abgeschlossen markiert sind. Wenn alle kleiner oder gleich sind, ist der aktuelle Zustand sicher, andernfalls liegt ein möglicher Deadlock vor und die Reservierung wird nicht vorgenommen.
+
+Reservierung:
+Wenn der Algorithmus den aktuellen Zustand als sicher markiert, erhält der Prozess die vom anfordernden Prozess benötigten Ressourcen.

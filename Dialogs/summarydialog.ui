@@ -1,0 +1,418 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>SummaryDialog</class>
+ <widget class="QDialog" name="SummaryDialog">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>500</width>
+    <height>600</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Deadlock Algorithm Simulation</string>
+  </property>
+  <property name="windowIcon">
+   <iconset resource="../resources.qrc">
+    <normaloff>:/resources/Icon_White.png</normaloff>:/resources/Icon_White.png</iconset>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">background-color: rgb(52, 61, 85);</string>
+  </property>
+  <widget class="QGroupBox" name="groupBox">
+   <property name="geometry">
+    <rect>
+     <x>27</x>
+     <y>10</y>
+     <width>451</width>
+     <height>571</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgb(74, 85, 104);
+border-radius: 10px;</string>
+   </property>
+   <layout class="QVBoxLayout" name="verticalLayout">
+    <item>
+     <widget class="QLabel" name="label">
+      <property name="styleSheet">
+       <string notr="true">color: rgb(235, 235, 235);
+font: 18pt &quot;Futura Hv BT&quot;;
+background-color: none;</string>
+      </property>
+      <property name="text">
+       <string>Test abgeschlossen</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QLabel" name="statistics_label">
+      <property name="styleSheet">
+       <string notr="true">color: rgb(235, 235, 235);
+font: 14pt &quot;Futura Hv BT&quot;;
+background-color: none;</string>
+      </property>
+      <property name="text">
+       <string>Statistiken</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <spacer name="verticalSpacer">
+      <property name="orientation">
+       <enum>Qt::Vertical</enum>
+      </property>
+      <property name="sizeHint" stdset="0">
+       <size>
+        <width>20</width>
+        <height>40</height>
+       </size>
+      </property>
+     </spacer>
+    </item>
+    <item>
+     <layout class="QGridLayout" name="gridLayout">
+      <item row="0" column="0">
+       <widget class="QLabel" name="resources_5">
+        <property name="font">
+         <font>
+          <family>Futura Bk BT</family>
+          <pointsize>12</pointsize>
+          <weight>50</weight>
+          <italic>false</italic>
+          <bold>false</bold>
+         </font>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">color: rgb(235, 235, 235);
+font: 12pt &quot;Futura Bk BT&quot;;
+background-color: none;</string>
+        </property>
+        <property name="text">
+         <string>Laufzeit:</string>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="1">
+       <widget class="QLabel" name="end_runtime_label">
+        <property name="font">
+         <font>
+          <family>Futura Bk BT</family>
+          <pointsize>12</pointsize>
+          <weight>50</weight>
+          <italic>false</italic>
+          <bold>false</bold>
+         </font>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">color: rgb(235, 235, 235);
+font: 12pt &quot;Futura Bk BT&quot;;
+background-color: none;</string>
+        </property>
+        <property name="text">
+         <string>0.00 s</string>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="0">
+       <widget class="QLabel" name="resources">
+        <property name="font">
+         <font>
+          <family>Futura Bk BT</family>
+          <pointsize>12</pointsize>
+          <weight>50</weight>
+          <italic>false</italic>
+          <bold>false</bold>
+         </font>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">color: rgb(235, 235, 235);
+font: 12pt &quot;Futura Bk BT&quot;;
+background-color: none;</string>
+        </property>
+        <property name="text">
+         <string>Genutzte Ressourcen:</string>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="1">
+       <widget class="QLabel" name="end_resources_label">
+        <property name="font">
+         <font>
+          <family>Futura Bk BT</family>
+          <pointsize>12</pointsize>
+          <weight>50</weight>
+          <italic>false</italic>
+          <bold>false</bold>
+         </font>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">color: rgb(235, 235, 235);
+font: 12pt &quot;Futura Bk BT&quot;;
+background-color: none;</string>
+        </property>
+        <property name="text">
+         <string>0</string>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+        </property>
+       </widget>
+      </item>
+      <item row="2" column="0">
+       <widget class="QLabel" name="avg_A_label">
+        <property name="font">
+         <font>
+          <family>Futura Bk BT</family>
+          <pointsize>12</pointsize>
+          <weight>50</weight>
+          <italic>false</italic>
+          <bold>false</bold>
+         </font>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">color: rgb(235, 235, 235);
+font: 12pt &quot;Futura Bk BT&quot;;
+background-color: none;</string>
+        </property>
+        <property name="text">
+         <string>Durchschnittliche Ressourcenzeit A: </string>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+        </property>
+       </widget>
+      </item>
+      <item row="2" column="1">
+       <widget class="QLabel" name="avg_A_value_label">
+        <property name="font">
+         <font>
+          <family>Futura Bk BT</family>
+          <pointsize>12</pointsize>
+          <weight>50</weight>
+          <italic>false</italic>
+          <bold>false</bold>
+         </font>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">color: rgb(235, 235, 235);
+font: 12pt &quot;Futura Bk BT&quot;;
+background-color: none;</string>
+        </property>
+        <property name="text">
+         <string>0</string>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+        </property>
+       </widget>
+      </item>
+      <item row="3" column="0">
+       <widget class="QLabel" name="avg_B_label">
+        <property name="font">
+         <font>
+          <family>Futura Bk BT</family>
+          <pointsize>12</pointsize>
+          <weight>50</weight>
+          <italic>false</italic>
+          <bold>false</bold>
+         </font>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">color: rgb(235, 235, 235);
+font: 12pt &quot;Futura Bk BT&quot;;
+background-color: none;</string>
+        </property>
+        <property name="text">
+         <string>Durchschnittliche Ressourcenzeit B:</string>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+        </property>
+       </widget>
+      </item>
+      <item row="3" column="1">
+       <widget class="QLabel" name="avg_B_value_label">
+        <property name="font">
+         <font>
+          <family>Futura Bk BT</family>
+          <pointsize>12</pointsize>
+          <weight>50</weight>
+          <italic>false</italic>
+          <bold>false</bold>
+         </font>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">color: rgb(235, 235, 235);
+font: 12pt &quot;Futura Bk BT&quot;;
+background-color: none;</string>
+        </property>
+        <property name="text">
+         <string>0</string>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+        </property>
+       </widget>
+      </item>
+      <item row="4" column="0">
+       <widget class="QLabel" name="avg_C_label">
+        <property name="font">
+         <font>
+          <family>Futura Bk BT</family>
+          <pointsize>12</pointsize>
+          <weight>50</weight>
+          <italic>false</italic>
+          <bold>false</bold>
+         </font>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">color: rgb(235, 235, 235);
+font: 12pt &quot;Futura Bk BT&quot;;
+background-color: none;</string>
+        </property>
+        <property name="text">
+         <string>Durchschnittliche Ressourcenzeit C:</string>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+        </property>
+       </widget>
+      </item>
+      <item row="4" column="1">
+       <widget class="QLabel" name="avg_C_value_label">
+        <property name="font">
+         <font>
+          <family>Futura Bk BT</family>
+          <pointsize>12</pointsize>
+          <weight>50</weight>
+          <italic>false</italic>
+          <bold>false</bold>
+         </font>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">color: rgb(235, 235, 235);
+font: 12pt &quot;Futura Bk BT&quot;;
+background-color: none;</string>
+        </property>
+        <property name="text">
+         <string>0</string>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </item>
+    <item>
+     <spacer name="verticalSpacer_2">
+      <property name="orientation">
+       <enum>Qt::Vertical</enum>
+      </property>
+      <property name="sizeHint" stdset="0">
+       <size>
+        <width>20</width>
+        <height>40</height>
+       </size>
+      </property>
+     </spacer>
+    </item>
+    <item>
+     <widget class="QPushButton" name="restart_pushButton">
+      <property name="styleSheet">
+       <string notr="true">/* Buttons */
+QPushButton {
+    background-color: #58657c;
+    border: none;
+    border-radius: 6px;
+    color: #ffffff;
+    padding: 8px 16px;
+    font: bold 14pt &quot;MS Shell Dlg 2&quot;;
+    margin: 2px;
+    
+    /* Schatten-Effekt */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+QPushButton:hover {
+    background-color: #5a6578;
+}
+
+QPushButton:pressed {
+    background-color: #3a4558;
+}
+QPushButton::!enabled {
+    border-radius: 5px;
+	background-color: rgb(43, 48, 63);
+	font: 18pt &quot;Futura Hv BT&quot;;
+	color: rgb(217, 217, 217);
+}
+</string>
+      </property>
+      <property name="text">
+       <string>Neu starten</string>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QPushButton" name="end_pushButton">
+      <property name="styleSheet">
+       <string notr="true">/* Buttons */
+QPushButton {
+    background-color: #58657c;
+    border: none;
+    border-radius: 6px;
+    color: #ffffff;
+    padding: 8px 16px;
+    font: bold 14pt &quot;MS Shell Dlg 2&quot;;
+    margin: 2px;
+    
+    /* Schatten-Effekt */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+QPushButton:hover {
+    background-color: #5a6578;
+}
+
+QPushButton:pressed {
+    background-color: #3a4558;
+}
+QPushButton::!enabled {
+    border-radius: 5px;
+	background-color: rgb(43, 48, 63);
+	font: 18pt &quot;Futura Hv BT&quot;;
+	color: rgb(217, 217, 217);
+}
+</string>
+      </property>
+      <property name="text">
+       <string>Schließen</string>
+      </property>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+ </widget>
+ <resources>
+  <include location="../resources.qrc"/>
+ </resources>
+ <connections/>
+</ui>

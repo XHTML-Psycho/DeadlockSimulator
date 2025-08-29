@@ -1,0 +1,24 @@
+"C:\Program Files\JetBrains\CLion 2020.2.4\bin\cmake\win\bin\cmake.exe" -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - MinGW Makefiles" C:\Users\junio\CLionProjects\DeadlockSimulator
+-- The CXX compiler identification is GNU 8.1.0
+-- Check for working CXX compiler: C:/Program Files (x86)/mingw-w64/i686-8.1.0-posix-dwarf-rt_v6-rev0/mingw32/bin/g++.exe
+-- Check for working CXX compiler: C:/Program Files (x86)/mingw-w64/i686-8.1.0-posix-dwarf-rt_v6-rev0/mingw32/bin/g++.exe - works
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+CMake Error at CMakeLists.txt:12 (find_package):
+  Could not find a package configuration file provided by "QT" with any of
+  the following names:
+
+    Qt6Config.cmake
+    qt6-config.cmake
+    Qt5Config.cmake
+    qt5-config.cmake
+
+  Add the installation prefix of "QT" to CMAKE_PREFIX_PATH or set "QT_DIR" to
+  a directory containing one of the above files.  If "QT" provides a separate
+  development package or SDK, be sure it has been installed.
+
+
+-- Configuring incomplete, errors occurred!
+See also "C:/Users/junio/CLionProjects/DeadlockSimulator/cmake-build-debug/CMakeFiles/CMakeOutput.log".

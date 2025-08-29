@@ -1,0 +1,25 @@
+Struktur:
+Die Simulation stellt eine idealisierte Version eines Systems mit drei Prozessen (A, B und C) und vier Ressourcentypen (Drucker, CD-ROMs, Plotter und Bandlaufwerke) dar.
+Abhängig von der Benutzerauswahl stehen mehrere Ressourcen jedes Typs zur Verfügung, die belegt oder frei sein können.
+
+Anforderungen:
+Wenn die Prozesse initialisiert werden, erhalten sie eine zufällige Liste von Ressourcen (um zufällige Ressourcenanfragen zu simulieren), wonach sie Ressourcen anfordern werden.
+Der Grund für die Festlegung vor Prozessstart ist, dass einige Algorithmen (Bankieralgorithmus und "Halten und Warten vermeiden") von Anfang an alle Ressourcen kennen müssen, die ein Prozess anfordern wird.
+Für die anderen Algorithmen spielt dies keine Rolle, da es im Kontext keinen Unterschied macht.
+
+Ressourcen halten:
+Wenn ein Prozess eine Ressource reserviert hat, wartet er 2 Sekunden multipliziert mit der Anzahl der reservierten Ressourcen, um die Nutzungsdauer der Ressource zu simulieren.
+Die Ressource wird erst wieder freigegeben, wenn die nächste Ressource gefunden wurde oder wenn alle benötigten Ressourcen verarbeitet wurden.
+
+Simulationsablauf:
+Alle Prozesse starten gleichzeitig, sodass sie parallel ablaufen. Sie beginnen mit dem Anfordern und Reservieren von Ressourcen und setzen dies fort, bis sie alles verarbeitet haben, was sie benötigen.
+
+Besonderheiten der Simulation:
+
+Parallele Ausführung der Prozesse A, B und C
+
+Zeitverzögerung zur Simulation der Ressourcennutzung
+
+Unterschiedliche Algorithmen mit verschiedenen Anforderungen an die Ressourcenplanung
+
+Echtzeit-Darstellung des Ressourcenstatus

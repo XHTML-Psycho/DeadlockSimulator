@@ -1,0 +1,10 @@
+Anforderung:
+Wenn der Prozess die nächste Ressource angefordert hat, muss zunächst die Bedingung für die zirkuläre Wartezeit beseitigt werden.
+
+Beseitigung der zirkulären Wartezeit:
+Um die Circular Wait zu beseitigen, muss das System sicherstellen, dass Ressourcenanforderungen so gestellt werden, dass eine zirkuläre Wartekette verhindert wird.
+Der simulierte Algorithmus ordnet die Ressourcen vollständig und weist jeder Ressource eine eindeutige Nummer (Zeitstempel) zu (1. Drucker, 2. CD-ROM, 3. Plotter, 4. Bandlaufwerk).
+Prozesse dürfen Ressourcen in aufsteigender Reihenfolge ihrer Zeitstempel anfordern, wodurch zirkuläre Ketten verhindert werden. Dies wird durch Sortieren der Liste der noch benötigten Ressourcen erreicht.
+
+Reservierung:
+Nun kann die nächste Ressource mit einer Anzahl > 0 aus der nun sortierten Liste ausgewählt und reserviert werden.

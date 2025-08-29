@@ -1,0 +1,24 @@
+Anforderung:
+Bevor ein Prozess die nächste Ressource anfordert, wählt er zunächst aus, welche Ressource er als nächstes reservieren möchte und in welcher Menge.
+
+Reservierung:
+Nachdem die nächste Ressource ausgewählt wurde, belegt der Prozess die angegebene Menge dieser Ressource.
+
+Vorwegnahme (Preemption):
+Um die "Keine Vorwegnahme"-Bedingung zu eliminieren, müssen Ressourcen durch einen anderen Thread entzogen werden können.
+Hierfür wird ein Round-Robin-System verwendet, das die Nutzung jeder Ressource in Zeitscheiben unterteilt, deren Größe der maximalen Belegungsdauer entspricht.
+Wenn ein Prozess beginnt, eine Ressource zu belegen, wird ein Timer gestartet.
+Wenn der Prozess rechtzeitig fertig wird, geschieht nichts. Überschreitet der Prozess jedoch die Zeitscheibe, wird ihm die Ressource entzogen.
+Wenn einem Prozess eine Ressource entzogen wird, kann ein anderer Prozess versuchen, die Belegung durchzuführen, und der enteignete Prozess wird zu einem späteren Zeitpunkt erneut versuchen, diese Ressource zu reservieren.
+
+Implementierungsdetails:
+
+Zeitscheiben-System für faire Ressourcenzuteilung
+
+Zeitüberwachung für jede Ressourcenbelegung
+
+Automatischer Entzug bei Zeitüberschreitung
+
+Wiedereingliederung enteigneter Prozesse in die Warteschlange
+
+Echtzeit-Überwachung der Ressourcennutzungsdauer

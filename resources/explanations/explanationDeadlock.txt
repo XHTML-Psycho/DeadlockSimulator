@@ -1,0 +1,21 @@
+Deadlocks (Ressourcenkonflikte):
+Damit ein Deadlock auftreten kann, müssen mehrere Voraussetzungen gleichzeitig erfüllt sein. Diese sind:
+
+Gegenseitiger Ausschluss (Mutual Exclusion):
+Mindestens eine Ressource muss im nicht-teilbaren Modus gehalten werden, was bedeutet, dass sie nicht gleichzeitig von mehreren Prozessen verwendet werden kann.
+Die Simulation erfüllt diese Bedingung, da jede Ressourcenart nur in begrenzter Anzahl verfügbar ist.
+
+Halten und Warten (Hold and Wait):
+Prozesse, die bereits Ressourcen halten, können zusätzliche Ressourcen anfordern, während sie die bereits belegten Ressourcen weiterhin behalten.
+Die Simulation erfüllt dies, indem ein Prozess auf die nächste Ressource wartet, bevor er die aktuell belegten Ressourcen freigibt.
+
+Keine Vorwegnahme (No Preemption):
+Ressourcen können nicht gewaltsam einem Prozess entzogen werden, der sie gerade hält. Sie können nur freiwillig durch den haltenden Prozess freigegeben werden.
+Die Simulation erfüllt diese Bedingung, da es keine Möglichkeit gibt, Ressourcen einem Prozess zu entziehen (weder durch den Hauptthread noch durch andere Prozesse), sobald diese belegt sind.
+
+Zirkuläres Warten (Circular Wait):
+Es existiert eine zirkulare Kette von zwei oder mehr Prozessen, bei der jeder Prozess eine Ressource hält, auf die der nächste Prozess in der Kette wartet.
+Die Simulation erfüllt diese Bedingung, da die Reihenfolge, in der Ressourcen angefordert werden, zufällig ist.
+
+Wenn alle diese Voraussetzungen erfüllt sind, kann ein Deadlock auftreten - dies ist jedoch nicht garantiert, da die Reihenfolge der Ressourcenanforderung und die Anzahl der benötigten Ressourcen pro Prozess zufällig generiert werden.
+Nach mehreren Versuchen wird ein Deadlock auftreten, der sich dadurch zeigt, dass zwei oder mehr Ressourcen belegt werden und niemals wieder freigegeben werden.
